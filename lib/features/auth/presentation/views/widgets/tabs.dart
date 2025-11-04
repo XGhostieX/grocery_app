@@ -4,8 +4,10 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:persistent_bottom_nav_bar/persistent_bottom_nav_bar.dart';
 
 import '../../../../../core/theme/app_theme.dart';
+import '../../../../cart/presentation/views/cart_view.dart';
+import '../../../../categories/presentation/views/categories_view.dart';
 import '../../../../home/presentation/views/home_view.dart';
-import '../auth_view.dart';
+import '../../../../user/presentation/views/user_view.dart';
 
 class Tabs extends ConsumerWidget {
   const Tabs({super.key});
@@ -17,7 +19,7 @@ class Tabs extends ConsumerWidget {
     return PersistentTabView(
       context,
       controller: controller,
-      screens: [const HomeView(), const HomeView(), const AuthView(), const AuthView()],
+      screens: [const HomeView(), const CategoriesView(), const CartView(), const UserView()],
       items: [
         PersistentBottomNavBarItem(
           icon: const Icon(IconlyBold.home),
