@@ -42,13 +42,6 @@ class Assets {
       'color': const Color(0xffB7DFF5),
     },
   ];
-  // static const fruits = 'assets/images/categories/fruits.png';
-  // static const grains = 'assets/images/categories/grains.png';
-  // static const nuts = 'assets/images/categories/nuts.png';
-  // static const spices = 'assets/images/categories/spices.png';
-  // static const spinach = 'assets/images/categories/spinach.png';
-  // static const vegetables = 'assets/images/categories/vegetables.png';
-
   // Landing
   static const buyOnLaptop = 'assets/images/landing/buy-on-laptop.jpg';
   static const buyThrough = 'assets/images/landing/buy-through.png';
@@ -57,8 +50,10 @@ class Assets {
   static const store = 'assets/images/landing/store.jpg';
   static const vegTable = 'assets/images/landing/veg-table.jpg';
   // Offers
-  static const offer1 = 'assets/images/offres/Offer1.jpg';
-  static const offer2 = 'assets/images/offres/Offer2.jpg';
-  static const offer3 = 'assets/images/offres/Offer3.jpg';
-  static const offer4 = 'assets/images/offres/Offer4.jpg';
+  List offers = [
+    'assets/images/offres/Offer1.jpg',
+    'assets/images/offres/Offer2.jpg',
+    'assets/images/offres/Offer3.jpg',
+    'assets/images/offres/Offer4.jpg',
+  ];
 }
