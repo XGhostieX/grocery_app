@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
+import '../../../../../core/utils/app_router.dart';
 import '../../../../../core/widgets/custom_text.dart';
 import '../../../../../core/widgets/text_btn.dart';
 import 'card_swiper.dart';
@@ -15,7 +17,11 @@ class HomeViewBody extends StatelessWidget {
       child: Column(
         children: [
           const CardSwiper(),
-          TextBtn(title: 'View All', function: () {}, color: Colors.blue),
+          TextBtn(
+            title: 'View All',
+            function: () => GoRouter.of(context).push(AppRouter.kSaleView),
+            color: Colors.blue,
+          ),
           const OnSaleListview(),
           Padding(
             padding: const EdgeInsets.all(10).copyWith(right: 0, bottom: 0),
