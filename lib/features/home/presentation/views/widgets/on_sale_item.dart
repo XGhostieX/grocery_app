@@ -5,6 +5,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../../../../core/theme/app_theme.dart';
 import '../../../../../core/widgets/custom_text.dart';
+import '../../../../../core/widgets/heart_btn.dart';
 import '../../../../../core/widgets/price.dart';
 
 class OnSaleItem extends ConsumerStatefulWidget {
@@ -43,13 +44,13 @@ class _OnSaleState extends ConsumerState<OnSaleItem> {
                 Column(
                   children: [
                     const CustomText(text: '1KG', size: 22, isBold: true),
-                    IconButton(onPressed: () {}, icon: const Icon(IconlyLight.bag2)),
-                    IconButton(onPressed: () {}, icon: const Icon(IconlyLight.heart)),
+                    InkWell(onTap: () {}, child: const Icon(IconlyLight.bag2)),
+                    const HeartBtn(),
                   ],
                 ),
               ],
             ),
-            const Price(),
+            const Price(onSale: true, price: 2.59, salePrice: 1.59, textPrice: '1'),
             const SizedBox(height: 5),
             const CustomText(text: 'Title', isBold: true, size: 16),
             const SizedBox(height: 5),
