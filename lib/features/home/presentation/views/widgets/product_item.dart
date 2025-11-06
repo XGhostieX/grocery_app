@@ -1,3 +1,4 @@
+import 'package:auto_hide_keyboard/auto_hide_keyboard.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -72,19 +73,21 @@ class _ProductItemState extends ConsumerState<ProductItem> {
                   SizedBox(
                     width: 25,
                     height: 25,
-                    child: TextField(
-                      controller: kgController,
-                      maxLength: 2,
-                      textAlign: TextAlign.center,
-                      textAlignVertical: TextAlignVertical.center,
-                      keyboardType: TextInputType.number,
-                      inputFormatters: [FilteringTextInputFormatter.allow(RegExp('[0-9.]'))],
-                      decoration: InputDecoration(
-                        counter: const Offstage(),
-                        contentPadding: EdgeInsets.zero,
-                        border: OutlineInputBorder(borderRadius: BorderRadius.circular(8)),
+                    child: AutoHideKeyboard(
+                      child: TextField(
+                        controller: kgController,
+                        maxLength: 2,
+                        textAlign: TextAlign.center,
+                        textAlignVertical: TextAlignVertical.center,
+                        keyboardType: TextInputType.number,
+                        inputFormatters: [FilteringTextInputFormatter.allow(RegExp('[0-9.]'))],
+                        decoration: InputDecoration(
+                          counter: const Offstage(),
+                          contentPadding: EdgeInsets.zero,
+                          border: OutlineInputBorder(borderRadius: BorderRadius.circular(8)),
+                        ),
+                        onChanged: (value) => setState(() {}),
                       ),
-                      onChanged: (value) => setState(() {}),
                     ),
                   ),
                   const SizedBox(width: 5),

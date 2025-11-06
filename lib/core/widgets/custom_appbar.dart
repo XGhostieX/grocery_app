@@ -6,15 +6,19 @@ import 'custom_text.dart';
 
 class CustomAppbar extends ConsumerWidget implements PreferredSizeWidget {
   final String title;
-  const CustomAppbar({super.key, required this.title});
+  final bool centerTitle;
+  final List<Widget>? actions;
+  const CustomAppbar({super.key, required this.title, this.centerTitle = false, this.actions});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final theme = ref.watch(themeNotifierProvider);
     return AppBar(
       title: CustomText(text: title, isBold: true),
+      centerTitle: centerTitle,
       backgroundColor: theme.scaffoldBackgroundColor,
       elevation: 0,
+      actions: actions,
     );
   }
 

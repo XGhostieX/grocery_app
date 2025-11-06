@@ -1,3 +1,4 @@
+import 'package:auto_hide_keyboard/auto_hide_keyboard.dart';
 import 'package:awesome_dialog/awesome_dialog.dart';
 import 'package:flutter/material.dart' hide ThemeMode;
 import 'package:flutter_iconly/flutter_iconly.dart';
@@ -32,12 +33,14 @@ class _UserViewBodyState extends ConsumerState<UserViewBody> {
         children: [
           const CustomText(text: 'Update Address', size: 20, isBold: true),
           const SizedBox(height: 10),
-          TextField(
-            controller: addressController,
-            decoration: InputDecoration(
-              labelText: 'Address',
-              hintText: '123 Main ST',
-              border: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
+          AutoHideKeyboard(
+            child: TextField(
+              controller: addressController,
+              decoration: InputDecoration(
+                labelText: 'Address',
+                hintText: '123 Main ST',
+                border: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
+              ),
             ),
           ),
         ],

@@ -29,7 +29,11 @@ class HomeViewBody extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 const CustomText(text: 'Our Products', size: 22, isBold: true),
-                TextBtn(title: 'Browse All', function: () {}, color: Colors.blue),
+                TextBtn(
+                  title: 'Browse All',
+                  function: () => GoRouter.of(context).push(AppRouter.kProductsView),
+                  color: Colors.blue,
+                ),
               ],
             ),
           ),
