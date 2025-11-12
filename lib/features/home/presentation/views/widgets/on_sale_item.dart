@@ -35,8 +35,7 @@ class _OnSaleState extends ConsumerState<OnSaleItem> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 CachedNetworkImage(
-                  imageUrl:
-                      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGdA9ZyGdsm9kwde7wywf3xiaco_4_CZNpMw&s',
+                  imageUrl: 'https://i.ibb.co/F0s3FHQ/Apricots.png',
                   fit: BoxFit.cover,
                   // width: MediaQuery.sizeOf(context).width * 0.22,
                   height: MediaQuery.sizeOf(context).width * 0.22,

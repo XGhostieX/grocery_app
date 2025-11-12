@@ -20,13 +20,13 @@ class Price extends StatelessWidget {
       child: Row(
         children: [
           CustomText(
-            text: '${(onSale ? salePrice : price * int.parse(textPrice)).toStringAsFixed(2)}\$',
+            text: '\$${(onSale ? salePrice : price * int.parse(textPrice)).toStringAsFixed(2)}',
             size: 22,
             color: Colors.green,
           ),
           const SizedBox(width: 5),
           if (onSale)
-            CustomText(text: '$price\$', size: 15, decoration: TextDecoration.lineThrough),
+            CustomText(text: '\$$price', size: 15, decoration: TextDecoration.lineThrough),
         ],
       ),
     );
