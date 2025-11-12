@@ -1,8 +1,10 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../../../../core/theme/app_theme.dart';
+import '../../../../../core/utils/app_router.dart';
 import '../../../../../core/widgets/custom_text.dart';
 import '../../../../../core/widgets/heart_btn.dart';
 import '../../../../../core/widgets/price.dart';
@@ -36,7 +38,7 @@ class _ProductItemState extends ConsumerState<ProductItem> {
     final theme = ref.watch(themeNotifierProvider);
     return InkWell(
       borderRadius: BorderRadius.circular(16),
-      onTap: () {},
+      onTap: () => GoRouter.of(context).push(AppRouter.kDetailsView),
       child: Container(
         padding: const EdgeInsets.all(10),
         decoration: BoxDecoration(

@@ -32,6 +32,10 @@ class _CartItemState extends State<CartItem> {
     super.dispose();
   }
 
+  void updateState() {
+    setState(() {});
+  }
+
   @override
   Widget build(BuildContext context) {
     return InkWell(
@@ -56,7 +60,7 @@ class _CartItemState extends State<CartItem> {
                 const CustomText(text: 'Title', size: 20, isBold: true),
                 const SizedBox(height: 15),
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     IconBtn(
                       icon: Icons.remove_rounded,
@@ -87,6 +91,7 @@ class _CartItemState extends State<CartItem> {
                 ),
               ],
             ),
+
             Column(
               children: [
                 IconBtn(icon: CupertinoIcons.cart_badge_minus, function: () {}, color: Colors.red),
