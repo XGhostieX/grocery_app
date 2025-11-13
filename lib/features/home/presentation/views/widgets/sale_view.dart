@@ -31,10 +31,12 @@ class SaleView extends StatelessWidget {
             )
           : GridView.builder(
               padding: const EdgeInsets.all(10),
-              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
                 crossAxisSpacing: 10,
                 mainAxisSpacing: 10,
+                childAspectRatio:
+                    MediaQuery.sizeOf(context).width / (MediaQuery.sizeOf(context).height * 0.55),
               ),
               itemCount: 10,
               itemBuilder: (context, index) => const OnSaleItem(),

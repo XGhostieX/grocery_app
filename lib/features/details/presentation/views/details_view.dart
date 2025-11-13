@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../../../core/widgets/custom_appbar.dart';
 import 'widgets/details_view_body.dart';
 
 class DetailsView extends StatelessWidget {
@@ -7,6 +8,9 @@ class DetailsView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(appBar: AppBar(), body: const DetailsViewBody());
+    return const Scaffold(
+      appBar: CustomAppbar(title: ''),
+      body: DetailsViewBody(),
+    );
   }
 }

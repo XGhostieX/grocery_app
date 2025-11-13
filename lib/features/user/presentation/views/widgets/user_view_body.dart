@@ -3,8 +3,10 @@ import 'package:awesome_dialog/awesome_dialog.dart';
 import 'package:flutter/material.dart' hide ThemeMode;
 import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../../../../core/theme/app_theme.dart';
+import '../../../../../core/utils/app_router.dart';
 import '../../../../../core/widgets/custom_text.dart';
 import 'user_tile.dart';
 
@@ -90,7 +92,11 @@ class _UserViewBodyState extends ConsumerState<UserViewBody> {
               function: () => showAddressDialog(context),
             ),
             UserTile(leading: IconlyBold.bag, title: 'Orders', function: () {}),
-            UserTile(leading: IconlyBold.heart, title: 'Wishlist', function: () {}),
+            UserTile(
+              leading: IconlyBold.heart,
+              title: 'Wishlist',
+              function: () => GoRouter.of(context).push(AppRouter.kWishlistView),
+            ),
             UserTile(leading: IconlyBold.show, title: 'Viewed', function: () {}),
             UserTile(leading: IconlyBold.unlock, title: 'Forget Password', function: () {}),
             UserTile(

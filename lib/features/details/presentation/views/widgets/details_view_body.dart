@@ -37,7 +37,7 @@ class _DetailsViewBodyState extends State<DetailsViewBody> {
         CachedNetworkImage(
           imageUrl: 'https://i.ibb.co/F0s3FHQ/Apricots.png',
           width: double.infinity,
-          height: MediaQuery.sizeOf(context).width * 0.4,
+          height: MediaQuery.sizeOf(context).height * 0.35,
           fit: BoxFit.cover,
         ),
         Container(
@@ -138,7 +138,7 @@ class _DetailsViewBodyState extends State<DetailsViewBody> {
                           price: 10,
                           textPrice: quantityController.text,
                         ),
-                        const CustomText(text: '/KG'),
+                        CustomText(text: '/${quantityController.text}KG'),
                       ],
                     ),
                   ],
