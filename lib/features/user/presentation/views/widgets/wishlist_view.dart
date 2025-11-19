@@ -1,9 +1,11 @@
+import 'package:awesome_dialog/awesome_dialog.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../../../../core/utils/app_router.dart';
+import '../../../../../core/utils/functions/show_dialog.dart';
 import '../../../../../core/widgets/custom_appbar.dart';
 import '../../../../../core/widgets/custom_text.dart';
 import '../../../../../core/widgets/heart_btn.dart';
@@ -19,7 +21,18 @@ class WishlistView extends StatelessWidget {
       appBar: CustomAppbar(
         title: 'Wishlist (6)',
         centerTitle: true,
-        actions: [IconBtn(icon: IconlyLight.delete, function: () {})],
+        actions: [
+          IconBtn(
+            icon: IconlyLight.delete,
+            function: () => showAwesomeDialog(
+              context: context,
+              type: DialogType.warning,
+              title: 'Clear WishList!',
+              desc: 'Your Wishlist Will be Cleared',
+              function: () {},
+            ),
+          ),
+        ],
       ),
       body: GridView.builder(
         padding: const EdgeInsets.all(10),

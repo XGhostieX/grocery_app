@@ -6,6 +6,8 @@ import '../../features/details/presentation/views/details_view.dart';
 import '../../features/home/presentation/views/home_view.dart';
 import '../../features/home/presentation/views/widgets/products_view.dart';
 import '../../features/home/presentation/views/widgets/sale_view.dart';
+import '../../features/user/presentation/views/widgets/history_view.dart';
+import '../../features/user/presentation/views/widgets/orders_view.dart';
 import '../../features/user/presentation/views/widgets/wishlist_view.dart';
 
 abstract class AppRouter {
@@ -15,6 +17,8 @@ abstract class AppRouter {
   static const kProductsView = '/products';
   static const kDetailsView = '/details';
   static const kWishlistView = '/wishlist';
+  static const kOrdersView = '/orders';
+  static const kHistortView = '/history';
 
   static final router = GoRouter(
     routes: [
@@ -25,6 +29,8 @@ abstract class AppRouter {
       GoRoute(path: kProductsView, builder: (context, state) => const ProductsView()),
       GoRoute(path: kDetailsView, builder: (context, state) => const DetailsView()),
       GoRoute(path: kWishlistView, builder: (context, state) => const WishlistView()),
+      GoRoute(path: kOrdersView, builder: (context, state) => const OrdersView()),
+      GoRoute(path: kHistortView, builder: (context, state) => const HistoryView()),
     ],
   );
 }

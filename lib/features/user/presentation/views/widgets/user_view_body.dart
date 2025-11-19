@@ -7,6 +7,7 @@ import 'package:go_router/go_router.dart';
 
 import '../../../../../core/theme/app_theme.dart';
 import '../../../../../core/utils/app_router.dart';
+import '../../../../../core/utils/functions/show_dialog.dart';
 import '../../../../../core/widgets/custom_text.dart';
 import 'user_tile.dart';
 
@@ -53,18 +54,6 @@ class _UserViewBodyState extends ConsumerState<UserViewBody> {
     ).show();
   }
 
-  void showLogoutDialog(BuildContext context) {
-    AwesomeDialog(
-      context: context,
-      dialogType: DialogType.warning,
-      animType: AnimType.scale,
-      title: 'Sign Out',
-      desc: 'Do you Want to Sign Out ?',
-      btnCancelOnPress: () {},
-      btnOkOnPress: () {},
-    ).show();
-  }
-
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -91,13 +80,21 @@ class _UserViewBodyState extends ConsumerState<UserViewBody> {
               subtitle: 'My Address',
               function: () => showAddressDialog(context),
             ),
-            UserTile(leading: IconlyBold.bag, title: 'Orders', function: () {}),
+            UserTile(
+              leading: IconlyBold.bag,
+              title: 'Orders',
+              function: () => GoRouter.of(context).push(AppRouter.kOrdersView),
+            ),
             UserTile(
               leading: IconlyBold.heart,
               title: 'Wishlist',
               function: () => GoRouter.of(context).push(AppRouter.kWishlistView),
             ),
-            UserTile(leading: IconlyBold.show, title: 'Viewed', function: () {}),
+            UserTile(
+              leading: IconlyBold.show,
+              title: 'History',
+              function: () => GoRouter.of(context).push(AppRouter.kHistortView),
+            ),
             UserTile(leading: IconlyBold.unlock, title: 'Forget Password', function: () {}),
             UserTile(
               leading: Icons.dark_mode_rounded,
@@ -115,7 +112,13 @@ class _UserViewBodyState extends ConsumerState<UserViewBody> {
             UserTile(
               leading: IconlyBold.logout,
               title: 'Logout',
-              function: () => showLogoutDialog(context),
+              function: () => showAwesomeDialog(
+                context: context,
+                type: DialogType.warning,
+                title: 'Sign Out',
+                desc: 'Do you Want to Sign Out ?',
+                function: () {},
+              ),
             ),
           ],
         ),
