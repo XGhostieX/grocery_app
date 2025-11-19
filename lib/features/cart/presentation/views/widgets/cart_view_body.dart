@@ -16,7 +16,12 @@ class CartViewBody extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              ElevatedBtn(title: 'Order Now', function: () {}),
+              ElevatedBtn(
+                title: 'Order Now',
+                bgColor: Colors.green,
+                fgColor: Colors.white,
+                function: () {},
+              ),
               const CustomText(text: 'Total: \$18.10', size: 20, isBold: true),
             ],
           ),

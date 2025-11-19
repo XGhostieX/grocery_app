@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:persistent_bottom_nav_bar/persistent_bottom_nav_bar.dart';
 
 import '../../../../../core/theme/app_theme.dart';
+import '../../../../../core/widgets/custom_text.dart';
 import '../../../../cart/presentation/views/cart_view.dart';
 import '../../../../categories/presentation/views/categories_view.dart';
 import '../../../../home/presentation/views/home_view.dart';
@@ -32,8 +33,16 @@ class Tabs extends ConsumerWidget {
           activeColorPrimary: theme.iconTheme.color!,
         ),
         PersistentBottomNavBarItem(
-          icon: const Icon(IconlyBold.buy),
-          inactiveIcon: const Icon(IconlyLight.buy),
+          icon: const Badge(
+            backgroundColor: Colors.blue,
+            label: CustomText(text: '6'),
+            child: Icon(IconlyBold.buy),
+          ),
+          inactiveIcon: const Badge(
+            backgroundColor: Colors.blue,
+            label: CustomText(text: '6'),
+            child: Icon(IconlyLight.buy),
+          ),
           activeColorPrimary: theme.iconTheme.color!,
         ),
         PersistentBottomNavBarItem(

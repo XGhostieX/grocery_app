@@ -143,7 +143,12 @@ class _DetailsViewBodyState extends State<DetailsViewBody> {
                     ),
                   ],
                 ),
-                ElevatedBtn(title: 'Add to Cart', function: () {}),
+                ElevatedBtn(
+                  title: 'Add to Cart',
+                  bgColor: Colors.green,
+                  fgColor: Colors.white,
+                  function: () {},
+                ),
               ],
             ),
           ),

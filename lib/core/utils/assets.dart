@@ -4,7 +4,7 @@ class Assets {
   static const addToCart = 'assets/images/add-to-cart.png';
   static const basket = 'assets/images/basket.png';
   static const box = 'assets/images/box.png';
-  static const cart = 'aassets/images/cart.png';
+  static const cart = 'assets/images/cart.png';
   static const google = 'assets/images/google.png';
   static const history = 'assets/images/history.png';
   static const warning = 'assets/images/warning.png';
