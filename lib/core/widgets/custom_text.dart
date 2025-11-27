@@ -7,6 +7,7 @@ class CustomText extends StatelessWidget {
   final bool isBold;
   final int? maxLines;
   final TextDecoration? decoration;
+  final FontStyle? fontStyle;
   const CustomText({
     super.key,
     required this.text,
@@ -15,6 +16,7 @@ class CustomText extends StatelessWidget {
     this.isBold = false,
     this.maxLines,
     this.decoration,
+    this.fontStyle,
   });
 
   @override
@@ -23,6 +25,7 @@ class CustomText extends StatelessWidget {
       text,
       style: TextStyle(
         decoration: decoration,
+        fontStyle: fontStyle,
         fontSize: size,
         fontWeight: isBold ? FontWeight.bold : null,
         color: color,

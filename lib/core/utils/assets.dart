@@ -43,12 +43,14 @@ class Assets {
     },
   ];
   // Landing
-  static const buyOnLaptop = 'assets/images/landing/buy-on-laptop.jpg';
-  static const buyThrough = 'assets/images/landing/buy-through.png';
-  static const buyfood = 'assets/images/landing/buyfood.jpg';
-  static const groceryCart = 'assets/images/landing/grocery-cart.jpg';
-  static const store = 'assets/images/landing/store.jpg';
-  static const vegTable = 'assets/images/landing/veg-table.jpg';
+  List landing = [
+    'assets/images/landing/buy-on-laptop.jpg',
+    'assets/images/landing/buy-through.png',
+    'assets/images/landing/buyfood.jpg',
+    'assets/images/landing/grocery-cart.jpg',
+    'assets/images/landing/store.jpg',
+    'assets/images/landing/veg-table.jpg',
+  ];
   // Offers
   List offers = [
     'assets/images/offres/Offer1.jpg',

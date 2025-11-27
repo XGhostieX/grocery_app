@@ -6,6 +6,8 @@ class TextBtn extends StatelessWidget {
   final String title;
   final double padding;
   final Color? color;
+  final TextDecoration? decoration;
+  final FontStyle? fontStyle;
   final VoidCallback function;
   const TextBtn({
     super.key,
@@ -13,6 +15,8 @@ class TextBtn extends StatelessWidget {
     required this.function,
     this.padding = 15,
     this.color,
+    this.decoration,
+    this.fontStyle,
   });
 
   @override
@@ -20,7 +24,13 @@ class TextBtn extends StatelessWidget {
     return TextButton(
       style: TextButton.styleFrom(padding: EdgeInsets.all(padding)),
       onPressed: function,
-      child: CustomText(text: title, color: color, size: 20),
+      child: CustomText(
+        text: title,
+        color: color,
+        size: 20,
+        decoration: decoration,
+        fontStyle: fontStyle,
+      ),
     );
   }
 }

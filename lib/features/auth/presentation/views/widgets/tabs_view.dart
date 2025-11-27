@@ -4,14 +4,13 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:persistent_bottom_nav_bar/persistent_bottom_nav_bar.dart';
 
 import '../../../../../core/theme/app_theme.dart';
-import '../../../../../core/widgets/custom_text.dart';
 import '../../../../cart/presentation/views/cart_view.dart';
 import '../../../../categories/presentation/views/categories_view.dart';
 import '../../../../home/presentation/views/home_view.dart';
 import '../../../../user/presentation/views/user_view.dart';
 
-class Tabs extends ConsumerWidget {
-  const Tabs({super.key});
+class TabsView extends ConsumerWidget {
+  const TabsView({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -33,15 +32,17 @@ class Tabs extends ConsumerWidget {
           activeColorPrimary: theme.iconTheme.color!,
         ),
         PersistentBottomNavBarItem(
-          icon: const Badge(
+          icon: Badge.count(
+            count: 6,
+            offset: const Offset(-28.5, 15),
             backgroundColor: Colors.blue,
-            label: CustomText(text: '6'),
-            child: Icon(IconlyBold.buy),
+            child: const Center(child: Icon(IconlyBold.buy)),
           ),
-          inactiveIcon: const Badge(
+          inactiveIcon: Badge.count(
+            count: 6,
+            offset: const Offset(-28.5, 15),
             backgroundColor: Colors.blue,
-            label: CustomText(text: '6'),
-            child: Icon(IconlyLight.buy),
+            child: const Center(child: Icon(IconlyLight.buy)),
           ),
           activeColorPrimary: theme.iconTheme.color!,
         ),

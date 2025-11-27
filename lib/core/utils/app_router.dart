@@ -1,9 +1,10 @@
 import 'package:go_router/go_router.dart';
 
 import '../../features/auth/presentation/views/auth_view.dart';
-import '../../features/auth/presentation/views/widgets/tabs.dart';
+import '../../features/auth/presentation/views/widgets/login_view.dart';
+import '../../features/auth/presentation/views/widgets/signup_view.dart';
+import '../../features/auth/presentation/views/widgets/tabs_view.dart';
 import '../../features/details/presentation/views/details_view.dart';
-import '../../features/home/presentation/views/home_view.dart';
 import '../../features/home/presentation/views/widgets/products_view.dart';
 import '../../features/home/presentation/views/widgets/sale_view.dart';
 import '../../features/user/presentation/views/widgets/history_view.dart';
@@ -12,7 +13,9 @@ import '../../features/user/presentation/views/widgets/wishlist_view.dart';
 
 abstract class AppRouter {
   static const kAuthView = '/auth';
-  static const kHomeView = '/home';
+  static const kSigninView = '/signin';
+  static const kSignupView = '/Signup';
+  static const kTabsView = '/tabs';
   static const kSaleView = '/sale';
   static const kProductsView = '/products';
   static const kDetailsView = '/details';
@@ -22,9 +25,10 @@ abstract class AppRouter {
 
   static final router = GoRouter(
     routes: [
-      GoRoute(path: '/', builder: (context, state) => const Tabs()),
-      GoRoute(path: kAuthView, builder: (context, state) => const AuthView()),
-      GoRoute(path: kHomeView, builder: (context, state) => const HomeView()),
+      GoRoute(path: '/', builder: (context, state) => const AuthView()),
+      GoRoute(path: kSigninView, builder: (context, state) => const SigninView()),
+      GoRoute(path: kSignupView, builder: (context, state) => const SignupView()),
+      GoRoute(path: kTabsView, builder: (context, state) => const TabsView()),
       GoRoute(path: kSaleView, builder: (context, state) => const SaleView()),
       GoRoute(path: kProductsView, builder: (context, state) => const ProductsView()),
       GoRoute(path: kDetailsView, builder: (context, state) => const DetailsView()),
