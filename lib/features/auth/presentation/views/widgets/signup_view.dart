@@ -54,7 +54,7 @@ class _SignupViewState extends State<SignupView> {
           ),
           Container(color: Colors.black.withValues(alpha: 0.7)),
           SingleChildScrollView(
-            padding: const EdgeInsets.all(20).copyWith(top: 120),
+            padding: const EdgeInsets.all(20).copyWith(top: 100),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [

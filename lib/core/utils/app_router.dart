@@ -1,6 +1,7 @@
 import 'package:go_router/go_router.dart';
 
 import '../../features/auth/presentation/views/auth_view.dart';
+import '../../features/auth/presentation/views/widgets/forget_password.dart';
 import '../../features/auth/presentation/views/widgets/signin_view.dart';
 import '../../features/auth/presentation/views/widgets/signup_view.dart';
 import '../../features/auth/presentation/views/widgets/tabs_view.dart';
@@ -14,7 +15,8 @@ import '../../features/user/presentation/views/widgets/wishlist_view.dart';
 abstract class AppRouter {
   static const kAuthView = '/auth';
   static const kSigninView = '/signin';
-  static const kSignupView = '/Signup';
+  static const kSignupView = '/signup';
+  static const kForgetPassword = '/forget-password';
   static const kTabsView = '/tabs';
   static const kSaleView = '/sale';
   static const kProductsView = '/products';
@@ -28,6 +30,7 @@ abstract class AppRouter {
       GoRoute(path: '/', builder: (context, state) => const AuthView()),
       GoRoute(path: kSigninView, builder: (context, state) => const SigninView()),
       GoRoute(path: kSignupView, builder: (context, state) => const SignupView()),
+      GoRoute(path: kForgetPassword, builder: (context, state) => const ForgetPassword()),
       GoRoute(path: kTabsView, builder: (context, state) => const TabsView()),
       GoRoute(path: kSaleView, builder: (context, state) => const SaleView()),
       GoRoute(path: kProductsView, builder: (context, state) => const ProductsView()),

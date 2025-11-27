@@ -50,7 +50,7 @@ class _SigninViewState extends State<SigninView> {
           ),
           Container(color: Colors.black.withValues(alpha: 0.7)),
           SingleChildScrollView(
-            padding: const EdgeInsets.all(20).copyWith(top: 120),
+            padding: const EdgeInsets.all(20).copyWith(top: 100),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -136,7 +136,7 @@ class _SigninViewState extends State<SigninView> {
                           decoration: TextDecoration.underline,
                           fontStyle: FontStyle.italic,
                           color: Colors.lightBlue,
-                          function: () {},
+                          function: () => GoRouter.of(context).push(AppRouter.kForgetPassword),
                         ),
                       ),
                       const SizedBox(height: 10),
