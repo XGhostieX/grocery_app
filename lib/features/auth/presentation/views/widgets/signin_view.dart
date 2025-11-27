@@ -32,7 +32,7 @@ class _SigninViewState extends State<SigninView> {
 
   void _submitForm() {
     if (_formKey.currentState!.validate()) {
-      displayMessage('Login Successful', false);
+      displayMessage('Sign In Successful', false);
       GoRouter.of(context).pushReplacement(AppRouter.kTabsView);
     }
   }

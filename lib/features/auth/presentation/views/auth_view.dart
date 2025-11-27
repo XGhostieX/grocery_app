@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'widgets/login_view.dart';
+import 'widgets/signin_view.dart';
 
 class AuthView extends StatelessWidget {
   const AuthView({super.key});
